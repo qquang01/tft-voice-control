@@ -1,0 +1,6 @@
+opencv-python>=4.8.0
+numpy>=1.24.0
+# OCR - chọn một trong hai
+easyocr>=1.7.0
+# Hoặc:
+# pytesseract>=0.3.10

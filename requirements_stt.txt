@@ -1,0 +1,11 @@
+# STT Dependencies
+
+# Whisper Python (khuyên dùng cho MVP)
+openai-whisper>=20230314
+
+# Audio recording
+pyaudio>=0.2.13
+wave>=0.0.2
+
+# Whisper.cpp (nếu muốn dùng C++ backend)
+# Cần build từ source trong whisper.cpp/

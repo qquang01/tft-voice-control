@@ -262,7 +262,7 @@ async def scrape_all_tables(
                     if attempt < MAX_RETRIES:
                         print(f"  Attempt {attempt} failed: {e}")
                         print(f"  Retrying in {RETRY_DELAY_MS}ms...")
-                        await page.wait_for_timeout(RETRY_DELAY_MS)
+                        await asyncio.sleep(RETRY_DELAY_MS / 1000)
                     else:
                         print(f"  ERROR after {MAX_RETRIES} attempts: {e}")
                         all_data["pages"][name] = {

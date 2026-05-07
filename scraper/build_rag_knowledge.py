@@ -239,7 +239,7 @@ def build_knowledge_base(data_dir: str, output_dir: str) -> None:
     # Print summary
     total_pages = len(all_data.get("pages", {}))
     pages_with_data = sum(
-        1 for p in all_data["pages"].values()
+        1 for p in all_data.get("pages", {}).values()
         if len(p.get("tables", [])) > 0 or len(p.get("lists", [])) > 0
     )
     md_size = os.path.getsize(md_path)

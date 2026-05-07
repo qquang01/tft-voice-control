@@ -129,6 +129,7 @@ async def extract_page_data(page: Page) -> Dict[str, Any]:
                     const cells = Array.from(firstRowCells.querySelectorAll('td, th')).map(c => c.innerText.trim());
                     if (cells.some(c => c && isNaN(parseFloat(c.replace('%', ''))))) {
                         tableData.headers = cells;
+                        tableData.rows.shift();
                     }
                 }
             }
